@@ -50,8 +50,6 @@ int main()
 			pinToggle(PORTB, Pin_Number_14);
 		
 			HL_Delay();
-			HL_Delay();
-			HL_Delay();
 			
 			intFlag = FALSE;
 		}
@@ -64,5 +62,5 @@ void EXTI15_10_IRQHandler()
 {
 	intFlag = TRUE;
 	
-	//interruptClear(Pin_Number_13);
+	interruptClear(Pin_Number_13);
 }
