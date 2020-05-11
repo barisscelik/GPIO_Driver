@@ -199,9 +199,11 @@ void HL_IO_Init(GPIO_TYPE gpio_type)
 void configInterrupt(GPIO_TypeDef *port, u32 pinNumber, edge_t edge)
 {
 	
-	RCC ->APB2ENR |= (1U << 14);				// SYSTEM CONFIG clock enable
+	RCC ->APB2ENR |= (1U << 14);	// SYSTEM CONFIG clock enable
 	
-//*************************EXTI CONFIGURATION***************************
+/*************************************************************************
+				EXTI CONFIGURATION
+*************************************************************************/
 	if(port == PORTA)
 	{
 		switch(pinNumber)
@@ -867,7 +869,7 @@ void interruptEnable(u32 pinNumber, IRQn_Type irqNumber)
 
 void interruptClear(u32 pinNumber)
 {
-	//This bit is cleared by programming it to ‘1’. 
+	//This bit is cleared by programming it to Â‘1Â’. 
 	EXTI ->PR |= (1U << pinNumber);
 	
 }
