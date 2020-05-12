@@ -842,11 +842,11 @@ void configInterrupt(GPIO_TypeDef *port, u32 pinNumber, edge_t edge)
 	{
 		case RISING_EDGE:
 			EXTI ->RTSR |= (1U << pinNumber);
-			break;
+		break;
 		
 		case FALLING_EDGE:
 			EXTI->FTSR |= (1U << pinNumber);
-			break;
+		break;
 		
 		case RISING_FALLING_EDGE:
 			EXTI ->RTSR |= (1U << pinNumber);
@@ -869,7 +869,7 @@ void interruptEnable(u32 pinNumber, IRQn_Type irqNumber)
 
 void interruptClear(u32 pinNumber)
 {
-	//This bit is cleared by programming it to 1. 
+	//This bit is cleared by programming it to 1. 
 	EXTI ->PR |= (1U << pinNumber);
 	
 }
