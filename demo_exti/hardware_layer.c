@@ -199,7 +199,7 @@ void HL_IO_Init(GPIO_TYPE gpio_type)
 void configInterrupt(GPIO_TypeDef *port, u32 pinNumber, edge_t edge)
 {
 	
-	RCC ->APB2ENR |= (1U << 14);	// SYSTEM CONFIG clock enable
+	SYSCFG_CLK_ENABLE;	// SYSTEM CONFIG clock enable
 	
 /*************************************************************************
 				EXTI CONFIGURATION
