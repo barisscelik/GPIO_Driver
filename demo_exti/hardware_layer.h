@@ -77,6 +77,7 @@ typedef int8_t   s8;
 #define GPIO_CLK_ENABLE_PORTG			(RCC->AHB1ENR |= (1U<<6))
 #define GPIO_CLK_ENABLE_PORTH			(RCC->AHB1ENR |= (1U<<7))
 #define GPIO_CLK_ENABLE_PORTI			(RCC->AHB1ENR |= (1U<<8))
+#define SYSCFG_CLK_ENABLE			(RCC->APB2ENR |= (1U<<14))
 
 //EXTI DEFINATION
 #define EXTI_PORTA		 ((u32) 0b1111)
