@@ -1,3 +1,10 @@
+/*
+ * hardware_layer.h
+ * Created on Sun May 16 2021
+ * Copyright (c) ERARGE
+ * Author : Baris Celik
+ */
+
 #ifndef HARDWARE_LAYER
 #define HARDWARE_LAYER
 
@@ -5,12 +12,13 @@
 #include "RTE_Components.h"             // Component selection
 
 
-#define LOW				0
+#define LOW					0
 #define HIGH				1
 
 #define FALSE				0
 #define TRUE				1
 
+//variables names changed
 typedef uint32_t u32;
 typedef uint16_t u16;
 typedef uint8_t  u8;
@@ -28,6 +36,7 @@ typedef int8_t   s8;
 #define PORTH		GPIOH
 #define PORTI		GPIOI
 
+// FO augment readibility
 #define Pin_Number_0			0		
 #define Pin_Number_1			1	
 #define Pin_Number_2			2	
@@ -47,10 +56,10 @@ typedef int8_t   s8;
 
 
 //PIN MODES
-#define INPUT_MODE			((u32) 0x00)
-#define OUTPUT_MODE			((u32) 0x01)
+#define INPUT_MODE					((u32) 0x00)
+#define OUTPUT_MODE					((u32) 0x01)
 #define ALTERNATE_FUNCTION_MODE		((u32) 0x02)
-#define ANALOG_MODE			((u32) 0x03)
+#define ANALOG_MODE					((u32) 0x03)
 
 //OUTPUT MODE TYPE
 #define OUTPUT_PP			((u32) 0x00)

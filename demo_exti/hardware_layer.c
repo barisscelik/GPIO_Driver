@@ -1,5 +1,13 @@
+/*
+ * hardware_layer.c
+ * Created on Sun May 16 2021
+ * Copyright (c) ERARGE
+ * Author : Baris Celik
+ */
+
 #include "hardware_layer.h"
 
+// Pin position for external interrupt config
 u32 PIN_POS[16] =
 {
 	(0x00),

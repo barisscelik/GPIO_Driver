@@ -1,3 +1,10 @@
+/*
+ * main.c
+ * Created on Sun May 16 2021
+ * Copyright (c) ERARGE
+ * Author : Baris Celik
+ */
+
 #include "hardware_layer.h"
 
 volatile _Bool intFlag = FALSE;
@@ -58,6 +65,7 @@ int main()
 }
 
 
+//interrrupt handler callback function
 void EXTI15_10_IRQHandler()
 {
 	intFlag = TRUE;
