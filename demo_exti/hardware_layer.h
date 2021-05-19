@@ -12,7 +12,7 @@
 #include "RTE_Components.h"             // Component selection
 
 
-#define LOW					0
+#define LOW				0
 #define HIGH				1
 
 #define FALSE				0
